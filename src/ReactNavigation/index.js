@@ -9,7 +9,8 @@ import {
   LanguageSelection,
   IntroScreen,
   SimpleCables,
-  BombDescription
+  BombDescription,
+  Button
 } from '../Screens'
 import Cables from "../Screens/SimpleCables/Components/Cables";
 
@@ -38,6 +39,9 @@ const DrawerNavigation = createDrawerNavigator({
   },
   SimpleCables: {
     screen: SimpleCablesTabNavigation
+  },
+  Button: {
+    screen: Button
   }
 });
 

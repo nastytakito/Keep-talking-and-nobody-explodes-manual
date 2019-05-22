@@ -200,6 +200,7 @@ const es = {
   IntroScreen: 'Introducción',
   BombDescription: 'Desactivando Bombas',
   SimpleCables: 'Cables simples',
+  Button: 'Botones'
 };
 
 export default es
