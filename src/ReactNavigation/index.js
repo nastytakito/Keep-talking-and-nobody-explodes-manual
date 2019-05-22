@@ -21,15 +21,27 @@ const SimpleCablesTabNavigation = createBottomTabNavigator({
   },
   SimpleCables3: {
     screen: Cables,
+    navigationOptions: {
+      title: '3 Cables'
+    }
   },
   SimpleCables4: {
     screen: Cables,
+    navigationOptions: {
+      title: '4 Cables'
+    }
   },
   SimpleCables5:{
     screen: Cables,
+    navigationOptions: {
+      title: '5 Cables'
+    }
   },
   SimpleCables6:{
     screen: Cables,
+    navigationOptions: {
+      title: '6 Cables'
+    }
   }
 });
 

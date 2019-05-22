@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, ScrollView} from 'react-native'
 import I18nText from '../../Utils/I18nText'
 import i18n from 'i18n-js'
-
+import WireSvg from '../../Assets/Images/WireComponent.svg'
+import InstructionsList from '../../Common/InstructionsList'
 const COLOR = {
   light: {
     background: '#f9f9f9',
@@ -41,21 +42,37 @@ class SimpleCables extends Component {
 
   render() {
     return (
-      <View>
-        <I18nText style={styles.sectionTitleText} t={'title'} />
-        <I18nText style={styles.sectionSubtitleText} t={'subtitle'} />
-        {
-          i18n.t('screens.SimpleCables.instructionsList').map((instruction,index)=>(
-              <Text key={index} style={styles.sectionDescriptionText}> - {instruction}</Text>
-          ))
-        }
-
-      </View>
+      <ScrollView contentContainerStyle={styles.container} >
+          <I18nText
+            containerStyle={styles.header}
+            style={styles.sectionTitleText} t={'title'} />
+          <I18nText
+            containerStyle={styles.header}
+            style={styles.sectionSubtitleText} t={'subtitle'} />
+        <View style={styles.content}>
+          <InstructionsList />
+          <View style={styles.svgContainer}>
+            <WireSvg width={'80%'} height={'80%'}/>
+            <Text>Ejemplo de Módulo de cables</Text>
+          </View>
+        </View>
+      </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    padding: 10,
+  },
+  content:{
+    flex:1,
+    paddingTop: 13,
+  },
+  header:{
+    justifyContent: 'center',
+  },
   text: {
     textAlign: 'justify',
   },
@@ -67,10 +84,18 @@ const styles = StyleSheet.create({
   sectionSubtitleText: {
     ...this.text,
     fontSize: 12,
+    fontStyle: 'italic'
+  },
+  svgContainer:{
+    padding: 5,
+    alignItems: 'center'
+  },
+  sectionDescriptionContainer:{
+    margin: 5
   },
   sectionDescriptionText: {
     ...this.text,
-    fontSize: 18,
+    fontSize: 16,
   }
 });
 
