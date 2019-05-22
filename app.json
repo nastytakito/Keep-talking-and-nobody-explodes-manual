@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Keep talking and nobody explodes manual",
-    "slug": "com.nastytakito.games",
+    "slug": "com-nastytakito-games",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [

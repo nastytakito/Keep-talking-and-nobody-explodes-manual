@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import {View, Text, Button, StyleSheet} from 'react-native'
+import DeviceStorage from "../../Utils/DeviceStorage";
+import i18n from "i18n-js";
+import {Localization} from "expo";
 
 const COLOR = {
   light: {
@@ -36,16 +39,14 @@ class Dashboard extends Component{
 
   constructor(props){
     super(props);
-    this.handleEnglishPress = this.handleEnglishPress.bind(this);
-    this.handleSpanishPress = this.handleSpanishPress.bind(this);
+    this.handleLanguagePress = this.handleLanguagePress.bind(this);
   }
 
-  handleEnglishPress(){
-    this.props.navigation.navigate('Intro',JSON.stringify({language: 'en_us'}))
-  }
-
-  handleSpanishPress(){
-    this.props.navigation.navigate('Intro',JSON.stringify({language: 'es_mx'}))
+  handleLanguagePress(language){
+    i18n.locale = language;
+    DeviceStorage.setItem('selectedLanguage', language).then(()=>{
+      this.props.navigation.navigate('IntroScreen')
+    });
   }
 
   render() {
@@ -58,10 +59,10 @@ class Dashboard extends Component{
           </View>
           <View style={styles.buttonsContainer}>
             <View style={styles.button}>
-              <Button title={'English'} onPress={this.handleEnglishPress} color={COLOR.dark.button.default}/>
+              <Button title={'English'} onPress={()=>this.handleLanguagePress('en')} color={COLOR.dark.button.default}/>
             </View>
             <View style={styles.button}>
-              < Button title={'Español'} onPress={this.handleSpanishPress} color={COLOR.dark.button.primary}/>
+              < Button title={'Español'} onPress={()=>this.handleLanguagePress('es')} color={COLOR.dark.button.primary}/>
             </View>
           </View>
         </View>

@@ -3,34 +3,61 @@ import {
   createAppContainer,
   createDrawerNavigator,
   createSwitchNavigator,
+  createBottomTabNavigator,
 } from 'react-navigation'
 import {
-  Dashboard,
-  IntroPage
+  LanguageSelection,
+  IntroScreen,
+  SimpleCables,
+  BombDescription
 } from '../Screens'
+import Cables from "../Screens/SimpleCables/Components/Cables";
 
-const StackNavigation = createStackNavigator({
-  Index: {
-    screen: IntroPage
+
+const SimpleCablesTabNavigation = createBottomTabNavigator({
+  SimpleCables:{
+    screen: SimpleCables
+  },
+  SimpleCables3: {
+    screen: Cables,
+  },
+  SimpleCables4: {
+    screen: Cables,
+  },
+  SimpleCables5:{
+    screen: Cables,
+  },
+  SimpleCables6:{
+    screen: Cables,
   }
 });
 
-
 const DrawerNavigation = createDrawerNavigator({
-  IntroPage: {
-    screen: StackNavigation,
-    title: 'Intro'
+  BombDescription: {
+    screen: BombDescription
   },
+  SimpleCables: {
+    screen: SimpleCablesTabNavigation
+  }
+});
+
+const StackNavigation = createStackNavigator({
+  IntroScreen: {
+    screen: IntroScreen
+  },
+  Pages: {
+    screen: DrawerNavigation
+  }
 });
 
 const SwitchNavigation = createSwitchNavigator({
-  Dashboard: {
-    screen: Dashboard
-  },
   Intro: {
-    screen: DrawerNavigation
+    screen: StackNavigation
   },
-  initialRouterName: 'Dashboard'
+  Language: {
+    screen: LanguageSelection
+  },
+  initialRouterName: 'Intro'
 });
 
 export default createAppContainer(SwitchNavigation)

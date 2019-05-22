@@ -1,7 +1,10 @@
-import Dashboard from './Dashboard'
-import IntroPage from './IntroPage'
-
+import LanguageSelection from './LanguageSelection'
+import IntroScreen from './IntroScreen'
+import BombDescription from "./BombDescription";
+import SimpleCables from './SimpleCables'
 export {
-  Dashboard,
-  IntroPage,
+  LanguageSelection,
+  IntroScreen,
+  BombDescription,
+  SimpleCables
 }
