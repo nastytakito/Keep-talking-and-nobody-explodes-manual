@@ -13,6 +13,7 @@ import {
   Button
 } from '../Screens'
 import Cables from "../Screens/SimpleCables/Components/Cables";
+import Keypad from "../Screens/Keypad";
 
 
 const SimpleCablesTabNavigation = createBottomTabNavigator({
@@ -54,6 +55,9 @@ const DrawerNavigation = createDrawerNavigator({
   },
   Button: {
     screen: Button
+  },
+  Keypad: {
+    screen: Keypad
   }
 });
 

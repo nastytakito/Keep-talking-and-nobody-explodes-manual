@@ -1,5 +1,5 @@
 import React from 'react'
-import I18nText from "../../../Utils/I18nText";
+import I18nText from "../../../Common/I18nText";
 import FrontBombExample from "../../../Assets/Images/Bomb.svg";
 import SideBombExample from "../../../Assets/Images/BombSide.svg";
 import {StyleSheet, View} from "react-native";

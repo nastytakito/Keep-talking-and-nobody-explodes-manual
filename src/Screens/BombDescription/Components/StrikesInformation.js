@@ -1,6 +1,6 @@
 import React from 'react'
 import {StyleSheet, View} from "react-native";
-import I18nText from "../../../Utils/I18nText";
+import I18nText from "../../../Common/I18nText";
 import TimeComponent from '../../../Assets/Images/TimerComponent.svg'
 
 const StrikesInformation = ()=>{

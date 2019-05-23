@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, ScrollView} from 'react-native'
-import I18nText from '../../Utils/I18nText'
+import I18nText from '../../Common/I18nText'
 import i18n from 'i18n-js'
 import WireSvg from '../../Assets/Images/WireComponent.svg'
 import InstructionsList from '../../Common/InstructionsList'
@@ -26,14 +26,7 @@ const COLOR = {
 class SimpleCables extends Component {
 
   static navigationOptions = ({navigation})=>({
-    title: i18n.t('SimpleCables'),
-    headerStyle: {
-      backgroundColor: COLOR.dark.background,
-    },
-    headerTintColor: COLOR.dark.text,
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    },
+    title: i18n.t('SimpleCables')
   });
 
   constructor(props){
@@ -73,16 +66,11 @@ const styles = StyleSheet.create({
   header:{
     justifyContent: 'center',
   },
-  text: {
-    textAlign: 'justify',
-  },
   sectionTitleText:{
-    ...this.text,
     fontSize: 26,
     fontWeight: 'bold'
   },
   sectionSubtitleText: {
-    ...this.text,
     fontSize: 12,
     fontStyle: 'italic'
   },

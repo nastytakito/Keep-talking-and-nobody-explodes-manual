@@ -1,6 +1,6 @@
 import React from 'react'
 import {View, StyleSheet} from 'react-native'
-import I18nText from '../../../Utils/I18nText'
+import I18nText from '../../../Common/I18nText'
 import InstructionsList from '../../../Common/InstructionsList';
 
 const Cables = ()=>{
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
   },
   container: {
-    borderTopWidth: 1
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd'
   },
   sectionTitleText:{
     ...this.text,
