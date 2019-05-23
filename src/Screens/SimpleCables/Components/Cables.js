@@ -1,7 +1,6 @@
 import React from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, StyleSheet} from 'react-native'
 import I18nText from '../../../Utils/I18nText'
-import i18n from "i18n-js";
 import InstructionsList from '../../../Common/InstructionsList';
 
 const Cables = ()=>{

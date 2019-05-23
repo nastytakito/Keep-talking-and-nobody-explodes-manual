@@ -35,8 +35,8 @@ InstructionsList.defaultProps = {
 InstructionsList.propTypes = {
   list: PropTypes.string,
   orderedList: PropTypes.bool,
-  textStyle: PropTypes.number,
-  containerStyle: PropTypes.number
+  textStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  containerStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
 };
 
 export default withNavigation(InstructionsList);

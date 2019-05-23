@@ -13,6 +13,9 @@ const es = {
       sectionDescription: 'Una bomba explotará cuando su contador llegue a 0:00 o cuando se sucedan varios fallos en el ' +
         'proceso de desactivación. La única forma de desactivar una bomba es desarmar todos sus módulos antes de que el ' +
         'temporizador finalice.',
+      bombExample: 'Ejemplo de bomba',
+      frontBomb: 'Frontal',
+      sideBomb: 'Lateral',
       modules: {
         title: 'Módulos',
         description: 'Cada bomba puede incluir hasta once módulos que deberán ser desarmados. Cada uno se presenta ' +
@@ -28,7 +31,8 @@ const es = {
           'explotarán al tercero. El temporizador continuará su cuenta atrás ' +
           'más rápido si ocurre un strike.\n' +
           'Si la bomba no tiene ningún indicador de strike, ésta explotará al ' +
-          'primer fallo sin dar lugar a error alguno.'
+          'primer fallo sin dar lugar a error alguno.',
+        strikeIndicator: 'Indicador de strike'
       },
       gatherInformation: {
         title: 'Reunir información',
