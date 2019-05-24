@@ -149,6 +149,24 @@ const es = {
       ],
       serialNumberVocal: 'Si el número de serie contiene una vocal:',
       serialNumberNoVocal: 'Si el número de serie no contiene una vocal:',
+      blinking: {
+        red: 'Parpadeo rojo',
+        blue: 'Parpadeo azul',
+        green: 'Parpadeo verde',
+        yellow: 'Parpadeo amarillo',
+      },
+      color: {
+        red: 'Rojo',
+        blue: 'Azul',
+        green: 'Verde',
+        yellow: 'Amarillo'
+      },
+      strike: {
+        zero: 'Sin strikes',
+        one: '1 strike',
+        two: '2 strikes'
+      },
+      buttonToPress: 'Botón a presionar'
     },
     WhoIsOnFirst: {
       title: 'Acerca de "¿Quién está en primera?"',
@@ -205,7 +223,8 @@ const es = {
   BombDescription: 'Desactivando Bombas',
   SimpleCables: 'Cables simples',
   Button: 'Botones',
-  Keypad: 'Teclado'
+  Keypad: 'Teclado',
+  SimonSays: 'Simón ese'
 };
 
 export default es

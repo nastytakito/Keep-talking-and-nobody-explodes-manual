@@ -10,10 +10,11 @@ import {
   IntroScreen,
   SimpleCables,
   BombDescription,
-  Button
+  Button,
+  Keypad,
+  SimonSays
 } from '../Screens'
 import Cables from "../Screens/SimpleCables/Components/Cables";
-import Keypad from "../Screens/Keypad";
 
 
 const SimpleCablesTabNavigation = createBottomTabNavigator({
@@ -58,6 +59,9 @@ const DrawerNavigation = createDrawerNavigator({
   },
   Keypad: {
     screen: Keypad
+  },
+  SimonSays: {
+    screen: SimonSays
   }
 });
 
