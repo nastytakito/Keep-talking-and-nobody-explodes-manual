@@ -130,7 +130,7 @@ const es = {
         }
       }
     },
-    KeyPad: {
+    Keypad: {
       title: 'Acerca del teclado',
       subtitle: 'No estoy seguro de qué son estos símbolos, pero sospecho que tienen algo que ver con el ocultismo.',
       instructionsList: [
@@ -204,7 +204,8 @@ const es = {
   IntroScreen: 'Introducción',
   BombDescription: 'Desactivando Bombas',
   SimpleCables: 'Cables simples',
-  Button: 'Botones'
+  Button: 'Botones',
+  Keypad: 'Teclado'
 };
 
 export default es
